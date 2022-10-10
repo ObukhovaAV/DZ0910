@@ -22,11 +22,11 @@ int[] collection = new int[12];
 FillArray (collection);
 PrintArray(collection);
 
-int length = collection.Length;
+
 int sumplus = 0;
 int summinus = 0;
 
-for (int pos = 0; pos < length; pos++)
+for (int pos = 0; pos < collection.Length; pos++)
 { 
     if (collection[pos]>0)
     {      
