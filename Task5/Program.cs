@@ -37,6 +37,10 @@ for (int i = 0; i < array.Length; i++)
     {
        sum = sum + array[i];
     }
+    else
+    {
+      sum = sum+0;
+    }
 }
 Console.WriteLine();
 Console.WriteLine($"Сумма чисел, стоящих на нечетных позициях, равна  {sum}");
