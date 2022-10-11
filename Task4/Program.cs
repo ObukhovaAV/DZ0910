@@ -1,10 +1,10 @@
 ﻿// В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
-void FillArray(int[] array)
+void FillArray(int[] array, int min, int max)
 {
     int length = array.Length;
     for (int i = 0; i < length; i++)
     {
-        array[i] = new Random().Next (-999,999);
+        array[i] = new Random().Next (min,max);
     }
 }
 void PrintArray(int[]array)
@@ -16,19 +16,21 @@ void PrintArray(int[]array)
     }
 }
 int[] array = new int[123];
-FillArray(array);
+FillArray(array, -999, 999);
 PrintArray(array);
 int sum = 0;
 for (int i = 0; i < array.Length; i++)
 {
-    if  (array[i]>=10)
-        {  
-           if (array[i]<=99)                             
-           {
-             int count = 1;
-             sum = sum + count;
-           }
+    if  (array[i]>=10 && array[i]<=99)                                 
+        {
+            int count = 1;
+            sum = sum + count;
+        }
+     
+    else
+        { 
+            sum = sum+0;
         }
 }
 Console.WriteLine();
-Console.Write($"В массиве {sum} чисел от 10 до 99");
+Console.Write($"В массиве {sum} чисел диапазона от 10 до 99");
